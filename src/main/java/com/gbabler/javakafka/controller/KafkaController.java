@@ -20,6 +20,6 @@ public class KafkaController {
 
     @PostMapping("/send")
     public void sendMessage(@RequestBody User user) {
-        kafkaSender.sendMessage("register", user);
+        kafkaSender.sendMessageWithCallback("register", user);
     }
 }
